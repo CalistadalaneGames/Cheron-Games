@@ -1,244 +1,132 @@
+<!--
+  README.md template for collection repositories.
+-->
+
+<!-- [PROJECT WARNING] =========================================================
+* Project warning
+---------------------------------------------------------------------------- -->
+
+> [!WARNING]  
+> This is a warning everyone should see, or remove this section entirely.
+
+<!--
+This divider separates the this section from the rest of the README. If you are
+not using the this section, comment this divider out.
+--->
+***
+
+<!-- ===================================================== [PROJECT WARNING] -->
+
+<!-- [PROJECT INTRO] ===========================================================
+* Project logo
+  There are references for both a "light" and "dark" images. The dark image
+  should have a background of HEX #0d1117, to match the dark mode of GitHub.
+  The light image is the fallback.
+* Project title
+  Optional, depending on whether the project title is already clear from logo.
+* Project catchphrase!
+  Optional, if having a catchphrase fits the project.
+* Project badges
+---------------------------------------------------------------------------- -->
+
 <div align="center">
 
   <img src=".github/logo/RepositoryTemplate-672x440.png" alt="Repository Template">
 
-  <br/>
+  <h1>Collection README.md template</h1>
 
-  ![RELEASE](https://img.shields.io/badge/release-September_2026-teal)&nbsp;&nbsp;
-  ![LICENSE](https://img.shields.io/badge/license-Apache%202.0-blue)
+  ![RELEASE](https://img.shields.io/badge/Release-XX.xx-teal)&nbsp;&nbsp;
 
-# Repository-Template
+  <h3>Catchrphrase goes here!</h3>
 
 </div>
 
-| CONTENTS                                                        |
-|:----------------------------------------------------------------|
-| [About this repository](#about-this-repository)                 |
-| [What this repository includes](#what-this-repository-includes) |
-| [Using the template](#using-the-template)                       |
-| [Folder structure](#folder-structure)                           |
-| [Supporting documentation](#supporting-documentation)           |
-
 ***
 
-# About this repository
+<!-- ======================================================= [PROJECT INTRO] -->
 
-This is a GitHub repository template, which provides a consistent starting structure for new repositories.
+<!-- [PROJECT DETAIL] ==========================================================
+* Project screenshot
+  There are references for both a "light" and "dark" images. The dark image
+  should have a background of HEX #0d1117, to match the dark mode of GitHub.
+  The light image is the fallback.
+---------------------------------------------------------------------------- -->
 
-## What this repository includes
+<div align="center">
 
-* A [.github/](.github) folder for repository resources.
-* A [docs/](docs) folder for repository documentation.
-* A [project/](project) folder for [*project repositories*](#project-repositories).
-* A [src/](src) folder for [*source code repositories*](#source-code-repositories).
-* A `.gitignore` file.
-* An `AGENTS.md` file.
-* A `LICENSE` file.
-* The repository's main `README.md`, which will be replaced by:
-  * The [Collection-README.md](Collection-README.md) for collection-style repositories.
-  * The [Project-README.md](Project-README.md) for project-style repositories.
-  * The [SourceCode-README.md](SourceCode-README.md) for software or source-code repositories.
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/repository/readme/screenshot01-dark.jpg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/repository/readme/screenshot01-light.jpg">
+    <img alt="Fallback image description" src=".github/repository/readme/screenshot01-light.jpg">
+  </picture>
+  <h6>The Screenshot</h6>
 
-# Using the template
+</div>
 
-## Collection repositories
+<!--
+This divider separates the this section from the rest of the README. If you are
+not using the this section, comment this divider out.
+--->
+***
 
-A ***collection repository*** is a repository that primarily collects links, notes, or documentation and **does not contain** source code.
+<!-- [HORIZONTAL MENU] =========================================================
+* Horizontal menu (top)
+  Contains components that aren't in/don't belong in the table of contents.
+---------------------------------------------------------------------------- -->
 
-[The Documentation Project](https://github.com/APrettyCoolProgram/TheDocumentationProject) is an example of a collection repository.
+<h6 align="center">
 
-To create a collection repository:
+  [WEBSITE](URL)&nbsp;&bull;&nbsp;[DEMO](URL)&nbsp;&bull;&nbsp;[MANUAL](docs/man/README.md)&nbsp;&bull;&nbsp;[CHANGELOG](docs/CHANGELOG.md)&nbsp;&bull;&nbsp;[ROADMAP](docs/ROADMAP.md)&nbsp;&bull;&nbsp;[KNOWN ISSUES](docs/KNOWN-ISSUES.md)
+  
+</h6>
 
-1. Create a new repository using this template.
-2. Remove the following files/folders:
-  * `src/`
-  * `projects/`
-  * `README.md` (this file!)
-  * `SourceCode-README.md`
-  * `Projects-README.md`
-3. Rename `Collection-README.md` to `README.md`.
-4. Modify `README.md` to reflect the content and purpose of the repository.
-5. Review the files in [docs/](docs) and remove any folders/documents the new repository does not need.
-6. Replace %RepositoryName% with the name of the new repository in all relevant files.
-7. Add the `.do-not-commit/` folder to `.github/` (optional, but helpful)
+<!--
+This divider separates the this section from the rest of the README. If you are
+not using the this section, comment this divider out.
+--->
+***
 
-## Project repositories
+<!-- ===================================================== [HORIZONTAL MENU] -->
 
-A ***project repository*** is a repository that contains multiple *projects*, which may include source code, documentation, and other assets.
+<!-- [TABLE OF CONTENTS] =======================================================
+* The Table of Contents
+  The Table of Contents contains components that aren't in/don't belong in the
+  horizontal menu.
+---------------------------------------------------------------------------- -->
 
-The difference between a **project repository** and a **source code repository** is that a **project repository** contains projects that are loosely related - or not related at all - whereas a **source code repository** primarily focuses on a single codebase.
+| CONTENTS             |
+|----------------------|
+| [Topic #1](#topic-1) |
+| [Topic #2](#topic-2) |
+| [Topic #3](#topic-3) |
 
-The [Experiments](https://github.com/APrettyCoolProgram/Experiments) repository is an example of a project repository.
+<!--
+This divider separates the this section from the rest of the README. If you are
+not using the this section, comment this divider out.
+--->
+***
 
-To create a project repository:
+<!-- =================================================== [TABLE OF CONTENTS] -->
 
-1. Create a new repository using this template.
-2. Remove the following files/folders:
-  * `src/`
-  * `README.md` (this file!)
-  * `Collection-README.md`
-  * `SourceCode-README.md`
-3. Rename `Projects-README.md` to `README.md`.
-4. Modify `README.md` to reflect the content and purpose of the repository.
-5. Review the files in [docs/](docs) and remove any folders/documents the new repository does not need.
-6. Replace %RepositoryName% with the name of the new repository in all relevant files.
-7. Add the `.do-not-commit/` folder to `.github/` (optional, but helpful)
+<!-- [PROJECT MESSAGE] =========================================================
+* Project message
+  Use for time-sensitive notices, deprecation warnings, or anything critical
+  that every visitor should see. Remove this section if not needed.
+============================================================================ -->
 
-Each project within the repository should have its own dedicated folder under [projects/](projects).
+> [!IMPORTANT]
+> Replace this with a message everyone should see, or remove this section entirely.
 
-## Source code repositories
+<!--
+This divider separates the this section from the rest of the README. If you are
+not using the this section, comment this divider out.
+--->
+***
 
-A ***source code repository*** is a repository that primarily contains buildable software or other source code.
+<!-- ===================================================== [PROJECT MESSAGE] -->
 
-To create a source code repository:
+## Topic #1
 
-1. Create a new repository using this template.
-2. Remove the following files/folders:
-  * `projects/`
-  * `README.md` (this file!)
-  * `Collection-README.md`
-  * `Projects-README.md`
-3. Rename `SourceCode-README.md` to `README.md`.
-4. Modify `README.md` to reflect the content and purpose of the repository.
-5. Review the files in [docs/](docs) and remove any folders/documents the new repository does not need.
-6. Replace %RepositoryName% with the name of the new repository in all relevant files.
-7. Add the `.do-not-commit/` folder to `.github/` (optional, but helpful)
+## Topic #2
 
-# Folder structure
-
-Each of these folders contains a `README.md` file that provides information about the contents and purpose of the folder.
-
-## The `./` (root) folder
-
-All repositories have the following root folder structure:
-
-```text
-.
-|-- .github/      Repository resources
-|-- docs/         Repository documentation
-|-- .gitignore    The repository .gitignore
-|-- LICENSE       The repository license
-|-- README.md     The repository README
-```
-
-*Project collections* also include a `projects/` folder to organize individual projects.
-
-```text
-.
-|-- projects/       Projects
-|   |-- ProjectA/   Project A
-|   |-- ProjectB/   Project B
-```
-
-*Source code repositories* also include a `src/` folder to organize the source code.
-
-```text
-.
-|-- src/          Source code
-```
-
-## The `./.github/` folder
-
-All repositories include a `./.github/` folder for repository-specific resources.
-
-```text
-.
-|-- .github/
-|   |-- .do-not-commit/   Data/resources that should not be committed
-|   |-- agents/           AGENT files
-|   |-- archive/          Archived data
-|   |-- development/      Development resources
-|   |-- logo/             Logos
-|   |-- readme/           Repository README.md resources
-|   |-- third-party/      Third-party resources
-|   |-- workspace/        Workspace resources
-```
-
-### The `./.github/development/` folder
-
-The `./.github/development/` folder contains resources related to the development process, including old source files, scratch files, templates, working files, and various development documents.
-
-```text
-.
-|-- .github/
-|   |-- development/
-|   |   |-- old-src/                      Old source files
-|   |   |-- scratch/                      Scratch files
-|   |   |-- template/                     Template files
-|   |   |-- working/                      Working files 
-|   |   |-- DesignDocument.md             Design document
-|   |   |-- Development-KnownIssues.md    Known issues in development
-|   |   |-- Development-Notes.md          Development notes
-|   |   |-- Development-Roadmap.md        Development roadmap
-|   |   |-- ScratchPad.md                 Scratch pad for development notes
-```
-
-## The `./docs/` folder
-
-All repositories include a `./docs/` folder for documentation and supporting materials.
-
-```text
-.
-|-- docs/
-|   |-- api/                  API documentation
-|   |-- man/                  Manual
-|   |-- release-notes/        Release notes (detailed version history)
-|   |-- development/          Development documentation
-|   |-- CHANGELOG.md          Changelog (basic version history)
-|   |-- CODEOWNERS            Code ownership assignments
-|   |-- CONTRIBUTORS.md       Repository contributors
-|   |-- FAQ.md                Frequently asked questions
-|   |-- KNOWN-ISSUES.md       Known issues and workarounds
-|   |-- ROADMAP.md            Planned work and future direction
-|   |-- SECURITY.md           Security policy and vulnerability reporting guidance
-|   |-- SUPPORT.md            How to get help
-|   |-- TROUBLESHOOTING.md    Common problems and resolution steps
-```
-
-### The `./docs/api/` folder
-
-The `./docs/api/` folder contains API documentation for the repository.
-
-```text
-|-- docs/
-|   |-- api/
-```
-
-### The `./docs/man/` folder
-
-The `./docs/man/` folder contains the manual for the repository.
-
-```text
-|-- docs/
-|   |-- man/
-```
-
-### The `./docs/release-notes/` folder
-
-The `./docs/release-notes/` folder contains detailed version history for the repository.
-
-```text
-|-- docs/
-|   |-- release-notes/
-```
-
-### The `./docs/development/` folder
-
-The `./docs/development/` folder contains development documentation for the repository.
-
-```text
-|-- docs/
-|   |-- development/
-```
-
-
-
-
-
-
-
-
-
-
-
-
+## Topic #3
