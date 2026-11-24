@@ -1,0 +1,456 @@
+{
+  "format": "cheron-story/1",
+  "id": "keepers-light",
+  "title": "The Keeper's Light",
+  "author": "Calistadalane Games",
+  "intro": "The storm has been building all evening, and the lighthouse on the point has gone dark. Without its beam, the supply boat will hit the rocks tonight. You are the only one close enough to do anything about it.",
+  "startRoom": "beach",
+  "maxScore": 50,
+  "rooms": [
+    {
+      "id": "beach",
+      "name": "Shingle Beach",
+      "description": "Grey waves hammer a beach of loose shingle. A path climbs north toward the headland, and the wind pushes you that way.",
+      "exits": [
+        {
+          "direction": "north",
+          "to": "yard"
+        }
+      ]
+    },
+    {
+      "id": "yard",
+      "name": "Keeper's Yard",
+      "description": "A windswept yard of cracked paving. The keeper's cottage stands to the east. To the north the lighthouse rises into the clouds, its great door shut tight. The path to the beach runs south.",
+      "exits": [
+        {
+          "direction": "south",
+          "to": "beach"
+        },
+        {
+          "direction": "east",
+          "to": "cottage",
+          "door": "cottage-door"
+        },
+        {
+          "direction": "north",
+          "to": "tower-foot",
+          "door": "tower-door"
+        }
+      ]
+    },
+    {
+      "id": "cottage",
+      "name": "Keeper's Cottage",
+      "description": "A cramped, cold room that smells of old smoke. A rough desk sits under the window. A trapdoor in the floor leads down. The yard is back to the west.",
+      "exits": [
+        {
+          "direction": "west",
+          "to": "yard",
+          "door": "cottage-door"
+        },
+        {
+          "direction": "down",
+          "to": "cellar"
+        },
+        {
+          "direction": "up",
+          "to": "loft",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "cellar",
+      "name": "Cellar",
+      "description": "Cold stone walls sweat in the lamplight. Steps lead up to the cottage. A low smugglers' tunnel slopes away toward the sea.",
+      "dark": true,
+      "exits": [
+        {
+          "direction": "up",
+          "to": "cottage"
+        },
+        {
+          "direction": "out",
+          "to": "beach"
+        }
+      ]
+    },
+    {
+      "id": "loft",
+      "name": "Loft",
+      "description": "A cramped space under the roof, hidden behind a false panel. Dust lies thick on every board. A ladder leads back down.",
+      "exits": [
+        {
+          "direction": "down",
+          "to": "cottage"
+        }
+      ]
+    },
+    {
+      "id": "tower-foot",
+      "name": "Foot of the Tower",
+      "description": "A round stone room at the base of the lighthouse. An iron stair spirals upward into the dark. The yard lies to the south.",
+      "exits": [
+        {
+          "direction": "south",
+          "to": "yard",
+          "door": "tower-door"
+        },
+        {
+          "direction": "up",
+          "to": "lantern-room"
+        }
+      ]
+    },
+    {
+      "id": "lantern-room",
+      "name": "Lantern Room",
+      "description": "The top of the lighthouse, ringed with great panes of salt-streaked glass. In the middle stands the lantern, cold and dark. A narrow door leads east onto the gallery. The stair goes down.",
+      "exits": [
+        {
+          "direction": "down",
+          "to": "tower-foot"
+        },
+        {
+          "direction": "east",
+          "to": "gallery"
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "name": "Gallery",
+      "description": "An iron balcony runs around the outside of the lighthouse. The wind is fierce, and the rail is low. Far below, the sea boils white around the rocks. The lantern room is back to the west.",
+      "exits": [
+        {
+          "direction": "west",
+          "to": "lantern-room"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "boat",
+      "name": "rowing boat",
+      "nouns": [
+        "boat"
+      ],
+      "adjectives": [
+        "rowing"
+      ],
+      "location": "beach",
+      "scenery": true,
+      "description": "A rowing boat, dragged high on the shingle and stove in. It will not be going anywhere."
+    },
+    {
+      "id": "rusty-key",
+      "name": "rusty key",
+      "nouns": [
+        "key"
+      ],
+      "adjectives": [
+        "rusty",
+        "small"
+      ],
+      "location": "beach",
+      "portable": true,
+      "description": "A small iron key, thick with rust.",
+      "initialDescription": "Something small and rusty is caught between the stones."
+    },
+    {
+      "id": "cottage-door",
+      "name": "cottage door",
+      "nouns": [
+        "door"
+      ],
+      "adjectives": [
+        "cottage",
+        "wooden"
+      ],
+      "foundIn": [
+        "yard",
+        "cottage"
+      ],
+      "scenery": true,
+      "openable": true,
+      "lockable": true,
+      "locked": true,
+      "key": "rusty-key",
+      "description": "A weathered wooden door with a small keyhole."
+    },
+    {
+      "id": "tower-door",
+      "name": "tower door",
+      "nouns": [
+        "door"
+      ],
+      "adjectives": [
+        "tower",
+        "lighthouse",
+        "iron"
+      ],
+      "foundIn": [
+        "yard",
+        "tower-foot"
+      ],
+      "scenery": true,
+      "openable": true,
+      "lockable": true,
+      "locked": true,
+      "key": "lighthouse-key",
+      "description": "A massive iron-bound door set into the base of the lighthouse."
+    },
+    {
+      "id": "lamp",
+      "name": "brass lamp",
+      "nouns": [
+        "lamp"
+      ],
+      "adjectives": [
+        "brass",
+        "hand"
+      ],
+      "location": "cottage",
+      "portable": true,
+      "switchable": true,
+      "providesLight": true,
+      "description": "A battered brass hand lamp, still half full of oil.",
+      "initialDescription": "A brass lamp sits on the desk."
+    },
+    {
+      "id": "logbook",
+      "name": "keeper's logbook",
+      "nouns": [
+        "logbook",
+        "book",
+        "journal"
+      ],
+      "adjectives": [
+        "keeper",
+        "keepers",
+        "log"
+      ],
+      "location": "cottage",
+      "portable": true,
+      "readable": true,
+      "text": "The last entry is in a shaky hand: \"If the light fails, the lamp oil is in the sea chest down in the cellar. The lighthouse key I hid in the loft. Pull the panel by the desk and climb. May whoever reads this have better luck than I.\"",
+      "description": "A thick logbook with a salt-stained cover.",
+      "initialDescription": "A logbook lies open on the desk."
+    },
+    {
+      "id": "chest",
+      "name": "sea chest",
+      "nouns": [
+        "chest"
+      ],
+      "adjectives": [
+        "sea",
+        "oak"
+      ],
+      "location": "cellar",
+      "container": true,
+      "openable": true,
+      "capacity": 2,
+      "scenery": true,
+      "description": "A heavy sea chest bound with brass."
+    },
+    {
+      "id": "oil-can",
+      "name": "oil can",
+      "nouns": [
+        "can",
+        "oil"
+      ],
+      "adjectives": [
+        "oil",
+        "lamp"
+      ],
+      "location": "chest",
+      "portable": true,
+      "description": "A dented can, heavy with lamp oil."
+    },
+    {
+      "id": "lighthouse-key",
+      "name": "lighthouse key",
+      "nouns": [
+        "key"
+      ],
+      "adjectives": [
+        "lighthouse",
+        "brass",
+        "large"
+      ],
+      "location": "loft",
+      "portable": true,
+      "description": "A large brass key stamped with a tiny lighthouse.",
+      "initialDescription": "A large brass key hangs from a nail."
+    },
+    {
+      "id": "lantern",
+      "name": "great lantern",
+      "nouns": [
+        "lantern",
+        "light"
+      ],
+      "adjectives": [
+        "great",
+        "big",
+        "lighthouse"
+      ],
+      "location": "lantern-room",
+      "scenery": true,
+      "container": true,
+      "capacity": 1,
+      "switchable": true,
+      "description": "The great lantern, with a dry reservoir and a cold wick."
+    }
+  ],
+  "rules": [
+    {
+      "id": "read-logbook",
+      "phase": "after",
+      "on": {
+        "verb": "read",
+        "item": "logbook"
+      },
+      "once": true,
+      "do": [
+        {
+          "score": 5
+        },
+        {
+          "revealExit": {
+            "room": "cottage",
+            "direction": "up"
+          }
+        },
+        {
+          "say": "You find the panel by the desk and slide it aside. A ladder leads up into the dark."
+        }
+      ]
+    },
+    {
+      "id": "take-oil",
+      "phase": "after",
+      "on": {
+        "verb": "take",
+        "item": "oil-can"
+      },
+      "once": true,
+      "do": [
+        {
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": "unlock-tower",
+      "phase": "after",
+      "on": {
+        "verb": "unlock",
+        "item": "tower-door"
+      },
+      "once": true,
+      "do": [
+        {
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": "fill-lantern",
+      "phase": "after",
+      "on": {
+        "verb": "put",
+        "item": "oil-can",
+        "second": "lantern"
+      },
+      "do": [
+        {
+          "setFlag": "oiled"
+        },
+        {
+          "say": "The oil runs down into the reservoir, and the wick darkens."
+        }
+      ]
+    },
+    {
+      "id": "light-lantern",
+      "phase": "instead",
+      "on": {
+        "verb": "turnon",
+        "item": "lantern"
+      },
+      "if": [
+        {
+          "flagSet": "oiled"
+        }
+      ],
+      "do": [
+        {
+          "setLit": {
+            "item": "lantern"
+          }
+        },
+        {
+          "setFlag": "beacon"
+        },
+        {
+          "score": 25
+        },
+        {
+          "say": "The wick catches. Light blooms in the great lens, and a white beam sweeps out over the waves."
+        }
+      ]
+    },
+    {
+      "id": "dry-lantern",
+      "phase": "instead",
+      "on": {
+        "verb": "turnon",
+        "item": "lantern"
+      },
+      "do": [
+        {
+          "say": "The wick is dry, and the reservoir is empty. It will not light without oil."
+        }
+      ]
+    },
+    {
+      "id": "jump-gallery",
+      "phase": "instead",
+      "on": {
+        "verb": "jump",
+        "room": "gallery"
+      },
+      "do": [
+        {
+          "say": "You climb over the rail and let the wind take you."
+        },
+        {
+          "end": "fell"
+        }
+      ]
+    }
+  ],
+  "endings": [
+    {
+      "id": "beacon",
+      "when": [
+        {
+          "flagSet": "beacon"
+        }
+      ],
+      "message": "Far out in the dark, a ship's horn answers your light. The supply boat turns away from the rocks and slides safely toward the harbour.",
+      "won": true
+    },
+    {
+      "id": "fell",
+      "when": [],
+      "message": "The sea takes you, and the light stays dark. The supply boat is never seen again.",
+      "won": false
+    }
+  ]
+}
